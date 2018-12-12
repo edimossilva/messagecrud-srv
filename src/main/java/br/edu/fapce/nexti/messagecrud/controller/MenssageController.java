@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,7 +22,7 @@ import br.edu.fapce.nexti.messagecrud.dto.CreateMessageDTO;
 import br.edu.fapce.nexti.messagecrud.dto.EditMessageDTO;
 import br.edu.fapce.nexti.messagecrud.model.Message;
 import br.edu.fapce.nexti.messagecrud.service.MessageService;
-
+@CrossOrigin("*")
 @RequestMapping("/messages")
 @RestController
 public class MenssageController {
